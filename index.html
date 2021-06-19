@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="modal-container" id="modal-container"></div>
+
+    <div class="container">
+      <button onclick="otpHandler()">Send OTP</button>
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="container">
+        <h1>Phone Verification</h1>
+        <hr style="width: 90%; margin-top: -15px; border-color: #f7ca00" />
+        <h4 style="margin-top: 20px; color: indigo">
+          Enter the OTP you received on 89206-6XXXX
+        </h4>
+        <div class="userInput">
+          <input
+            type="text"
+            id="ist"
+            maxlength="1"
+            onpaste="pasteHandler()"
+            onkeyup="clickEvent(event,this,'second','ist')"
+          />
+          <input
+            type="text"
+            id="second"
+            maxlength="1"
+            onkeyup="clickEvent(event,this,'third','ist')"
+          />
+          <input
+            type="text"
+            id="third"
+            maxlength="1"
+            onkeyup="clickEvent(event,this,'fourth','second')"
+          />
+          <input
+            type="text"
+            id="fourth"
+            maxlength="1"
+            onkeyup="clickEvent(event,this,'fifth','third')"
+          />
+          <input
+            type="text"
+            id="fifth"
+            maxlength="1"
+            onkeyup="clickEvent(event,this,'sixth','fourth')"
+          />
+          <input
+            type="numb"
+            id="sixth"
+            maxlength="1"
+            onkeyup="clickEvent(event,this,'sixth','fifth')"
+          />
+        </div>
+        <div class="container hz">
+          <div><a href="#">Change Number</a></div>
+          <div><a href="#">Re-send OTP</a></div>
+        </div>
+        <button id="raa">CONFIRM</button>
+      </div>
+    </div>
+  </body>
+</html>
